@@ -45,7 +45,7 @@
   background-color: #fff;
   padding: 2.8em 1.6em;
   border-radius: 5px;
-  box-shadow: 3px 5px 10px #eee;
+  box-shadow: 1px 1px 10px #999;  
 }
 
 .main-innner-div .img-master {
@@ -62,6 +62,7 @@
   font-weight: 400;
   font-size: .9rem;
   color: hsl(0, 0%, 48%);
+  line-height: 25px;
   padding-bottom: 2.1em;
 }
 .main-inner-row {
@@ -79,4 +80,48 @@
 .main-inner-row .bookmark-btn {
   border: none;
   background: transparent;
+}
+
+/* Numbers component */
+.numbers {
+  margin-top: 2em;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px #999;
+  padding: 1em 0;
+}
+.numbers div:nth-child(2) {
+  border: none;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: .9em 0;
+  width: 30%;
+  margin: auto;
+}
+
+.numbers-row {
+  display: block;
+}
+.numbers-row h1 {
+  color: hsl(0, 0%, 0%);
+  font-weight: 700;
+}
+.numbers-row p {
+  font-weight: 400;
+  font-size: 12px;
+  color: rgb(154, 154, 154);
+  padding: 1em 0;
+}
+
+progress {
+  border: none;
+  width: 80%;
+  margin: 1em 0;
+}
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 10px;
+}
+progress[value]::-webkit-progress-value {
+  background-color: rgb(60 ,180, 171);
+  border-radius: 10px;
 }
