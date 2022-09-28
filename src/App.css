@@ -30,8 +30,8 @@
 /* HeroComponent */
 .hero-bg {
   background-image: url('/public/images/image-hero-mobile.jpg');
-  background-position: center;
-  background-size: contain;
+  background-position: center top;
+  background-size: cover;
   background-repeat: no-repeat;
   height: 300px;
 }
