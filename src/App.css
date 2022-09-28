@@ -5,4 +5,28 @@
 
 .App {
   text-align: center;
+  height: 100vh;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+/* NavComponent */
+.nav {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.9em;
+}
+
+/* HeroComponent */
+.hero-bg {
+  background-image: url('/public/images/image-hero-mobile.jpg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 300px;
 }
