@@ -1,13 +1,15 @@
+import HeroComponent from './Components/hero-component';
 
 import './App.css';
-import HeroComponent from './Components/hero-component';
-//import NavComponent from './Components/nav-component';
+import MainComponent from './Components/main-component';
+
 
 function App() {
   return (
     <div className="App">
         <HeroComponent />
       <div className="container">
+        <MainComponent />
       </div>
     </div>
   );

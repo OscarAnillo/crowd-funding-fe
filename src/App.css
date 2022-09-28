@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,10 +8,13 @@
 .App {
   text-align: center;
   height: 100vh;
+  font-family: 'Commissioner', sans-serif;
+  position: relative;
 }
 .container {
   width: 90%;
   margin: auto;
+  /* border: 1px solid red; */
 }
 
 /* NavComponent */
@@ -29,4 +34,49 @@
   background-size: contain;
   background-repeat: no-repeat;
   height: 300px;
+}
+
+/* MainComponent */
+.main {
+  position: relative;
+  top: -50px
+}
+.main-div {
+  background-color: #fff;
+  padding: 2.8em 1.6em;
+  border-radius: 5px;
+  box-shadow: 3px 5px 10px #eee;
+}
+
+.main-innner-div .img-master {
+  position: absolute;
+  top: -25px;
+  left: 40%
+}
+.main-innner-div h1 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding-bottom: 1.2em;
+}
+.main-innner-div p {
+  font-weight: 400;
+  font-size: .9rem;
+  color: hsl(0, 0%, 48%);
+  padding-bottom: 2.1em;
+}
+.main-inner-row {
+  display: flex;
+  justify-content: space-between;
+}
+.main-inner-row .cyan-btn {
+  background-color: rgb(60 ,180, 171);
+  border: none;
+  border-radius: 30px;
+  padding: 1em 4em;
+  color: #fff;
+  font-weight: 700;
+}
+.main-inner-row .bookmark-btn {
+  border: none;
+  background: transparent;
 }
