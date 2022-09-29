@@ -1,9 +1,6 @@
-import { useState } from 'react';
-
 import data from "../data/data-products.json";
 
 export default function PledgeComponent(){
-    const [test, setTest] = useState('act');
 
     return (
         <div>

@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .App {
@@ -27,6 +28,26 @@
   padding-top: 1.9em;
 }
 
+.menu {
+  background: #fff;
+  border-radius: 10px;
+  width: 80%;
+  margin: 1em auto;
+  text-align: left;
+  padding: 1.2em;
+  position: relative;
+  z-index: 2;
+  box-shadow: 1px 1px 10px #999;
+}
+.menu li {
+  padding: 1.3em 0;
+}
+.menu li:nth-child(2) {
+  border: none;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
 /* HeroComponent */
 .hero-bg {
   background-image: url('/public/images/image-hero-mobile.jpg');
@@ -39,13 +60,14 @@
 /* MainComponent */
 .main {
   position: relative;
-  top: -50px
+  top: -50px;
 }
 .main-div {
   background-color: #fff;
   padding: 2.8em 1.6em;
   border-radius: 5px;
-  box-shadow: 1px 1px 10px #999;  
+  box-shadow: 1px 1px 10px #999;
+  z-index: 1;
 }
 
 .main-innner-div .img-master {
