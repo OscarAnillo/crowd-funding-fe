@@ -20,11 +20,12 @@ function App() {
       document.body.style.background = '#fff';
     }
   }, [showMenu])
+  
   return (
     <div className="App">
         <HeroComponent showMenu={showMenu} clickHandler={clickHandler}/>
       <div className="container">
-        <MainComponent />
+        <MainComponent showMenu={showMenu} />
       </div>
     </div>
   );

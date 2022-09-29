@@ -1,6 +1,6 @@
-export default function MastercraftComponent(){
+export default function MastercraftComponent({ showMenu }){
     return (
-        <div className="main-div">
+        <div className={`${showMenu ? "show-main-div" : "main-div"}`}>
                 <div className="main-innner-div">
                     <img src="/images/logo-mastercraft.svg" alt="" className="img-master"/>
                     <h1>Mastercraft Bamboo Monitor Riser</h1>

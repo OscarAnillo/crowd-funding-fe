@@ -14,8 +14,8 @@
 }
 .container {
   width: 90%;
+  max-width: 340px;
   margin: auto;
-  /* border: 1px solid red; */
 }
 
 /* NavComponent */
@@ -40,7 +40,7 @@
   box-shadow: 1px 1px 10px #999;
 }
 .menu li {
-  padding: 1.3em 0;
+  padding: 1.4em 0;
 }
 .menu li:nth-child(2) {
   border: none;
@@ -63,12 +63,21 @@
   top: -50px;
 }
 .main-div {
-  background-color: #fff;
+  background: #fff;
   padding: 2.8em 1.6em;
   border-radius: 5px;
   box-shadow: 1px 1px 10px #999;
   z-index: 1;
 }
+
+.show-main-div {
+  background: transparent;
+  padding: 2.8em 1.6em;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px #999;
+  z-index: 1;
+}
+
 
 .main-innner-div .img-master {
   position: absolute;
