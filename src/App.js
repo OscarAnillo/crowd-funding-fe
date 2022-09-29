@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     if(showMenu){
-      document.body.style.background = 'rgb(181, 181, 181)';
+      document.body.style.background = 'rgba(181, 181, 181, .8)';
     } else {
       document.body.style.background = '#fff';
     }

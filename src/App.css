@@ -195,6 +195,9 @@ progress[value]::-webkit-progress-value {
   font-size: .85rem;
   padding-bottom: 1em;
 }
+.pledge h1 {
+  font-size: 2rem;
+}
 .pledge h1 span {
   font-size: 1rem;
   color: rgb(154, 154, 154);;
@@ -228,9 +231,13 @@ progress[value]::-webkit-progress-value {
   color: rgb(234, 234, 234);
 }
 .out h1 {
-  font-size: 1rem;
+  font-size: 2rem;
   color: rgb(154, 154, 154);
 }
+.out h1 span {
+  font-size: 1rem;
+}
+
 .out button {
   border: none;
   border-radius: 30px;
@@ -238,4 +245,16 @@ progress[value]::-webkit-progress-value {
   background-color: rgb(203, 203, 203);
   color: #fff;
   font-weight: 700;
+}
+
+
+/* Modal in Mastercraft */
+.modal-title {
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 700;
+}
+.inner-box-modal {
+  border: 1px solid red;
+  width: 90%;
+  margin: auto;
 }
