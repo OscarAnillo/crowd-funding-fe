@@ -5,7 +5,7 @@ export default function PledgeComponent(){
     return (
         <div>
             {data.map(item => (
-                <div key={item.name}>
+                <div key={item.name} className="pledge">
                     <h3>{item.name}</h3>
                     <h4>{item.pledge}</h4>
                     <p>{item.text}</p>
