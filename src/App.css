@@ -7,7 +7,7 @@
 
 .App {
   text-align: center;
-  height: 100vh;
+  min-height: 100vh;
   font-family: 'Commissioner', sans-serif;
   position: relative;
 }
@@ -124,4 +124,26 @@ progress[value]::-webkit-progress-bar {
 progress[value]::-webkit-progress-value {
   background-color: rgb(60 ,180, 171);
   border-radius: 10px;
+}
+
+/* AboutComponent */
+.article {
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px #999;
+  padding: 2.8em 0; 
+  text-align: left;
+  margin-top: 32px;
+}
+.article section {
+  width: 80%;
+  margin: auto;
+}
+.article section h1 {
+  padding-bottom: 1em;
+}
+.article section p {
+  font-size: .8rem;
+  line-height: 25px;
+  color: rgb(154, 154, 154);
+  padding-bottom: 1.2em;
 }

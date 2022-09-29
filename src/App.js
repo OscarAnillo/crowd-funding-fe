@@ -1,7 +1,8 @@
 import HeroComponent from './Components/hero-component';
+import MainComponent from './Components/main-component';
 
 import './App.css';
-import MainComponent from './Components/main-component';
+
 
 
 function App() {
