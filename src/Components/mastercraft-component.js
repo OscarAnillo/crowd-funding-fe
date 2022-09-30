@@ -47,9 +47,14 @@ export default function MastercraftComponent({ showMenu }) {
       >
         <Box sx={style}>
             <div className="inner-box-modal">
+              <div className="inner-box-row">
                 <Typography id="modal-modal-title" variant="subtitle1" component="h5">
                     Back this project
                 </Typography>
+                <Typography id="modal-modal-title" variant="subtitle1" component="h5" onClick={clickHandlerClose}>
+                    x
+                </Typography>
+              </div>  
                 <Typography id="modal-modal-description" variant="body2" sx={{ mt: 2 }}>
                     Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
                 </Typography>

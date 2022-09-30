@@ -257,6 +257,11 @@ progress[value]::-webkit-progress-value {
   overflow: scroll;
   width: 90%;
 }
+.inner-box-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
 #modal-modal-title {
   font-weight: 700;
 }
