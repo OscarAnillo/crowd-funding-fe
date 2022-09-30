@@ -11,6 +11,7 @@
   min-height: 100vh;
   font-family: 'Commissioner', sans-serif;
   position: relative;
+  overflow: auto;
 }
 .container {
   width: 90%;
@@ -25,7 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 1.9em;
+  padding-top: 1px solid red.9em;
 }
 
 .menu {
@@ -34,13 +35,13 @@
   width: 80%;
   margin: 1em auto;
   text-align: left;
-  padding: 1.2em;
+  padding: 1px solid red.2em;
   position: relative;
   z-index: 2;
   box-shadow: 1px 1px 10px #999;
 }
 .menu li {
-  padding: 1.4em 0;
+  padding: 1px solid red.4em 0;
 }
 .menu li:nth-child(2) {
   border: none;
@@ -64,18 +65,18 @@
 }
 .main-div {
   background: #fff;
-  padding: 2.8em 1.6em;
+  padding: 2.8em 1px solid red.6em;
   border-radius: 5px;
   box-shadow: 1px 1px 10px #999;
-  z-index: 1;
+  z-index: 1px solid red;
 }
 
 .show-main-div {
   background: transparent;
-  padding: 2.8em 1.6em;
+  padding: 2.8em 1px solid red.6em;
   border-radius: 5px;
   box-shadow: 1px 1px 10px #999;
-  z-index: 1;
+  z-index: 1px solid red;
 }
 
 
@@ -86,8 +87,8 @@
 }
 .main-innner-div h1 {
   font-weight: 700;
-  font-size: 1.4rem;
-  padding-bottom: 1.2em;
+  font-size: 1px solid red.4rem;
+  padding-bottom: 1px solid red.2em;
 }
 .main-innner-div p {
   font-weight: 400;
@@ -176,7 +177,7 @@ progress[value]::-webkit-progress-value {
   font-size: .8rem;
   line-height: 25px;
   color: rgb(154, 154, 154);
-  padding-bottom: 1.2em;
+  padding-bottom: 1px solid red.2em;
 }
 
 /* PledgeComponent */
@@ -184,7 +185,7 @@ progress[value]::-webkit-progress-value {
   border: 1px solid rgb(215, 215, 215);
   border-radius: 10px;
   margin: 1em 0;
-  padding: 1.3em 1.5em;
+  padding: 1px solid red.3em 1px solid red.5em;
 }
 .pledge h3 {
   font-size: 1rem;
@@ -205,7 +206,7 @@ progress[value]::-webkit-progress-value {
 .pledge button {
   border: none;
   border-radius: 30px;
-  padding: 1em 1.5em;
+  padding: 1em 1px solid red.5em;
   background-color: rgb(60 ,180, 171);
   color: #fff;
   font-weight: 700;
@@ -215,7 +216,7 @@ progress[value]::-webkit-progress-value {
   border: 1px solid rgb(215, 215, 215);
   border-radius: 10px;
   margin: 1em 0;
-  padding: 1.3em 1.5em;
+  padding: 1px solid red.3em 1px solid red.5em;
 }
 .out h3 {
   font-size: 1rem;
@@ -241,7 +242,7 @@ progress[value]::-webkit-progress-value {
 .out button {
   border: none;
   border-radius: 30px;
-  padding: 1em 1.5em;
+  padding: 1em 1px solid red.5em;
   background-color: rgb(203, 203, 203);
   color: #fff;
   font-weight: 700;
@@ -249,12 +250,67 @@ progress[value]::-webkit-progress-value {
 
 
 /* Modal in Mastercraft */
-.modal-title {
+.MuiModal-root {
+  border-radius: 10px;
+  font-family: 'Commissioner', sans-serif;
+  height: auto;
+  margin: auto;
+  overflow: scroll;
+  width: 80%;
+}
+#modal-modal-title {
+  font-weight: 700;
+}
+#modal-modal-description {
+  font-family: 'Commissioner', sans-serif; 
+  font-weight: 400;
+  font-size: .8rem;
+  color: rgb(154, 154, 154);
+  padding-bottom: 1em;
+}
+
+.modal-div {
+  border: 1px solid rgb(215, 215, 215);
+  border-radius: 5px;
+  font-family: 'Commissioner', sans-serif;
+  padding: 1em .5em;
+  margin: 1em 0;
+}
+.modal-div > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#input-radio-btn {
+  width: 10%;
+  height: 20px;
+  margin-right: 1em;  
+}
+#modal-div-title {
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 700;
+  padding-top: 1em;
+}
+#modal-div-subtitle {
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 700;
+  color: rgb(60 ,180, 171);
+  padding-bottom: 1em;
+}
+#modal-div-text {
+  font-family: 'Commissioner', sans-serif;
+  font-size: .75rem;
+  color: rgb(154, 154, 154);
+  padding-bottom: 1em;
+  line-height: 20px;
+}
+#modal-div-quantity {
   font-family: 'Commissioner', sans-serif;
   font-weight: 700;
 }
-.inner-box-modal {
-  border: 1px solid red;
-  width: 90%;
-  margin: auto;
+#modal-div-quantity span {
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 400;
+  color: rgb(154, 154, 154);
+  font-size: 1rem;
 }

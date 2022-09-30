@@ -1,13 +1,15 @@
 import { useState } from "react";
 import {Typography, Modal, Box } from "@mui/material";
-import PledgeComponent from "./pledge-component";
+import DataModalComponent from "./data-modal-component";
 
 const style = {
+    borderRadius: '10px',
     position: 'absolute',
-    top: '50%',
+    top: '75%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: '90%',
+    width: '85%',
+    margin:'auto',
     background: '#fff',
     border: '1px solid rgb(215,215,215)',
     boxShadow: 24,
@@ -45,13 +47,13 @@ export default function MastercraftComponent({ showMenu }) {
       >
         <Box sx={style}>
             <div className="inner-box-modal">
-                <Typography id="modal-modal-title" variant="h6" className="modal-title">
+                <Typography id="modal-modal-title" variant="subtitle1" component="h5">
                     Back this project
                 </Typography>
-                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                <Typography id="modal-modal-description" variant="body2" sx={{ mt: 2 }}>
                     Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
                 </Typography>
-                {/* */}
+                <DataModalComponent />
             </div>
         </Box>
       </Modal>
