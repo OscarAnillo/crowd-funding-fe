@@ -8,6 +8,7 @@ import './App.css';
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const clickHandler = () => {
     setShowMenu(!showMenu);
@@ -15,7 +16,7 @@ function App() {
 
   useEffect(() => {
     if(showMenu){
-      document.body.style.background = 'rgba(181, 181, 181, .8)';
+      document.body.style.background = 'rgb(181, 181, 181)';
     } else {
       document.body.style.background = '#fff';
     }
@@ -25,7 +26,7 @@ function App() {
     <div className="App">
         <HeroComponent showMenu={showMenu} clickHandler={clickHandler}/>
       <div className="container">
-        <MainComponent showMenu={showMenu} />
+        <MainComponent showMenu={showMenu} submitted={submitted} setSubmitted={setSubmitted} />
       </div>
     </div>
   );
