@@ -8,6 +8,7 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: "85%",
+  maxWidth:"540px",
   margin: "auto",
   background: "#fff",
   border: "1px solid rgb(215,215,215)",

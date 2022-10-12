@@ -11,6 +11,7 @@
   min-height: 100vh;
   font-family: 'Commissioner', sans-serif;
   position: relative;
+  overflow: hidden;
 }
 .container {
   width: 90%;
@@ -328,6 +329,9 @@ progress[value]::-webkit-progress-value {
   color: rgb(154, 154, 154);
   font-size: 1rem;
 }
+#modal-div-quantity-desktop {
+  display: none;
+}
 
 .out-modal-div {
   border: 1px solid rgb(237, 237, 237);
@@ -446,6 +450,9 @@ progress[value]::-webkit-progress-value {
     margin-left: 2em;
     text-shadow: 1px 1px 1px #000;
   }
+  .nav-desktop ul li:hover {
+    cursor: pointer;
+  }
   .nav-mobile {
     display: none;
   }
@@ -487,6 +494,11 @@ progress[value]::-webkit-progress-value {
     padding: 1.6em 3.5em;
     color: #fff;
     font-weight: 700;
+    transition: all .5s;
+  }
+  .main-inner-row .cyan-btn:hover {
+    background-color: rgb(21, 122, 116);
+    cursor: pointer;
   }
   .main-inner-row .bookmark-btn {
     display: none;
@@ -497,13 +509,21 @@ progress[value]::-webkit-progress-value {
     border-radius: 30px;
     padding-right: 4em;
   }
+  .bookmark-btn-desktop:hover {
+    cursor: pointer;
+  }
+  .bookmark-btn-desktop img:hover {
+    filter: hue-rotate(180deg) sepia(100%) contrast(300%);
+  }
   .bookmark-btn-desktop span {
     color: rgb(125, 125, 125);
     font-weight: 700;
     position: relative;
     top: -20px;
     left: 15px
-
+  }
+  .bookmark-btn-desktop span:hover {
+    color: rgb(38, 124, 113);
   }
   /* Numbers component */
   .numbers {
@@ -599,6 +619,11 @@ progress[value]::-webkit-progress-value {
     background-color: rgb(60 ,180, 171);
     color: #fff;
     font-weight: 700;
+    transition: all .5s;
+  }
+  .pledge button:hover {
+    background-color: rgb(21, 122, 116);
+    cursor: pointer;
   }
   
   .out {
@@ -609,60 +634,42 @@ progress[value]::-webkit-progress-value {
   }
   .out h3 {
     font-size: 1rem;
-    padding-bottom: .5em;
-    color: rgb(128, 128, 128);
+    padding-bottom: 1em;
   }
   .out h4 {
     color: rgb(195, 217, 214);
     font-size: .85rem;
-    padding-bottom: 1em;
-  }
-  .out p {
-    color: rgb(234, 234, 234);
-  }
-  .out h1 {
-    font-size: 2rem;
-    color: rgb(154, 154, 154);
-  }
-  .out h1 span {
-    font-size: 1rem;
+    padding-bottom: 1.2em;
   }
   
-  .out button {
-    border: none;
-    border-radius: 30px;
-    padding: 1em 2.3em;
-    background-color: rgb(203, 203, 203);
-    color: #fff;
-    font-weight: 700;
+  .out h1 span {
+    font-size: 1rem;
   }
   
   
   /* Modal in Mastercraft */
   .MuiModal-root {
-    border-radius: 10px;
-    font-family: 'Commissioner', sans-serif;
-    margin: auto;
     overflow: auto;
-    width: 90%;
+    max-width: 730px;
   }
   .inner-box-row {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
   }
-  #modal-modal-title {
-    font-weight: 700;
+  .data-modal-row-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
-  #modal-modal-x {
-    color: #999;
-    font-weight: 700;
+  #modal-modal-x:hover {
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #000;
   }
   #modal-modal-description {
-    font-family: 'Commissioner', sans-serif; 
-    font-weight: 400;
-    font-size: .8rem;
-    color: rgb(154, 154, 154);
+    font-size: 1rem;
     padding-bottom: 1em;
   }
   
@@ -673,44 +680,54 @@ progress[value]::-webkit-progress-value {
     padding: 1em;
     margin: 1em 0;
   }
-  
+  .modal-div:hover {
+    border: 1px solid rgb(60 ,180, 171);
+  }
   .modal-div > div {
     display: flex;
     align-items: center;
     justify-content: flex-start;
   }
+ 
   #input-radio-btn {
     width: 10%;
-    height: 20px;
-    margin-right: 1em;  
+    height: 25px;
+    margin-right: .2em;  
   }
   #modal-div-title {
-    font-family: 'Commissioner', sans-serif;
-    font-weight: 700;
-    padding-top: 1em;
+    padding-top: 0;
+    padding-right: 1em;
+  }
+  #modal-div-title:hover {
+    color: rgb(60 ,180, 171);
+    cursor: pointer;
   }
   #modal-div-subtitle {
-    font-family: 'Commissioner', sans-serif;
-    font-weight: 700;
-    color: rgb(60 ,180, 171);
-    padding-bottom: 1em;
+    padding-bottom: 0;
+    padding-right: 10em;
   }
   #modal-div-text {
     font-family: 'Commissioner', sans-serif;
     font-size: .75rem;
     color: rgb(154, 154, 154);
-    padding-bottom: 1em;
+    padding: 1em 0 1em 2.5em;
+    width: 85%;
+    margin: auto;
     line-height: 20px;
   }
-  #modal-div-quantity {
+  #modal-div-quantity-desktop {
+    display: block;
     font-family: 'Commissioner', sans-serif;
     font-weight: 700;
   }
-  #modal-div-quantity span {
+  #modal-div-quantity-desktop span {
     font-family: 'Commissioner', sans-serif;
     font-weight: 400;
     color: rgb(154, 154, 154);
     font-size: 1rem;
+  }
+  #modal-div-quantity {
+    display: none;
   }
   
   .out-modal-div {
@@ -733,17 +750,13 @@ progress[value]::-webkit-progress-value {
   }
   
   .enter-pledge {
-    border: none;
-    border-top: 1px solid rgb(215, 215, 215);
-    font-family: 'Commissioner', sans-serif;
-    padding: 1em 0;
-    text-align: center;
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: right;
   }
   .enter-pledge p {
-    color: rgb(154, 154, 154);
-    padding-bottom: 1em;
-    font-weight: 500;
+    padding-bottom: 0;
   }
   .enter-pledge input {
     border: 1px solid rgb(215, 215, 215);
@@ -753,9 +766,9 @@ progress[value]::-webkit-progress-value {
     outline: none;
     margin-right: 1em;
   }
-  .enter-pledge input::after {
-    content: '';
-    border: 1px solid cyan;
+  .enter-pledge input:hover {
+    cursor: pointer;
+    border: 1px solid rgb(60 ,180, 171);
   }
   .enter-pledge input::placeholder {
     color: #999;
@@ -767,6 +780,11 @@ progress[value]::-webkit-progress-value {
     background-color: rgb(60 ,180, 171);
     color: #fff;
     padding: 1em 1.5em;
+    transition: all .2s;
+  }
+  .enter-pledge button:hover {
+    background: rgb(24 120 116);
+    cursor: pointer;
   }
   
   /* ModalComplete */
@@ -793,6 +811,9 @@ progress[value]::-webkit-progress-value {
     background-color: rgb(60 ,180, 171);
     border-radius: 30px;
     padding: 1em 2.2em;
+  }
+  .complete-div button:hover {
+    background-color: rgb(21, 122, 116);
   }
   .complete-div button a {
     color: #fff;

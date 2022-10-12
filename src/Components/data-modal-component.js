@@ -6,47 +6,47 @@ export default function DataModalComponent({ submitted, setSubmitted }) {
   const [showEnterPledge, setShowEnterPledge] = useState(false);
   const [pledgeAmount, setPledgeAmout] = useState("");
   const [valueRadio, setValueRadio] = useState("");
+  const [tests, setTests] = useState([...data]);
 
   const clickHandler = (e) => {
-    if (valueRadio === "1") {
+    if (e.currentTarget.value === "1") {
       setSubmitted(true);
-    } else if (valueRadio === "2" || valueRadio === "3") {
+    }  
+    if (e.currentTarget.value === "2" || e.currentTarget.value === "3") {
       setShowEnterPledge(true);
       setSubmitted(false);
     }
   };
 
-  const changeHandler = (e) => {
-    setPledgeAmout(e.target.value);
+  const changeHandler = (e, id) => {
+    const { value } = e.target;
+    setTests((pledge_value) => 
+    pledge_value?.map((list, index) => 
+        index === id ? {...list, pledge_value: value} : list)
+    );
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    if (!pledgeAmount) {
-      alert("Please provide an amount.");
-      return;
-    } else if (pledgeAmount < 25) {
-      alert("Please provide the correct amount.");
-      return;
-    }
     setPledgeAmout("");
     setSubmitted(true);
   };
-  console.log(valueRadio);
+  console.log(pledgeAmount)
   return (
     <div>
       <>
-        {data.map((item) => (
-          <div key={item.id} className={`${item.className} modal-div`}>
-            <div onClick={clickHandler}>
-              {item.className !== "out-modal-div" ? (
+        {tests.map((pledgeData, i) => (
+          <div key={pledgeData.id} className={`${pledgeData.className} modal-div`}>
+            <div>
+              {pledgeData.className !== "out-modal-div" ? (
                 <input
                   type="radio"
                   id="input-radio-btn"
-                  value={item.id}
-                  checked={valueRadio === item.id}
-                  name="pledge"
+                  value={pledgeData.id}
+                  checked={valueRadio === pledgeData.id}
+                  name="pledgeRadio"
                   onChange={(e) => setValueRadio(e.target.value)}
+                  onClick={clickHandler}
                 />
               ) : (
                 <input
@@ -57,47 +57,52 @@ export default function DataModalComponent({ submitted, setSubmitted }) {
                 />
               )}
 
-              <div>
+              <div className="data-modal-row-desktop">
                 <Typography
                   variant="subtitle2"
                   component="h4"
                   id="modal-div-title"
                 >
-                  {item.name}
+                  {pledgeData.name}
                 </Typography>
                 <Typography
                   variant="body2"
                   component="h6"
                   id="modal-div-subtitle"
                 >
-                  {item.pledge}
+                  {pledgeData.pledge}
                 </Typography>
+                <div>
+              <Typography variant="h6" component="h4" id="modal-div-quantity-desktop">
+                {pledgeData.quantity} {pledgeData.quantity ? <span>left</span> : ""}{" "}
+              </Typography>
+              </div>
               </div>
             </div>
             <div>
               <Typography variant="body2" component="p" id="modal-div-text">
-                {item.text}
+                {pledgeData.text}
               </Typography>
             </div>
             <div>
               <Typography variant="h6" component="h4" id="modal-div-quantity">
-                {item.quantity} {item.quantity ? <span>left</span> : ""}{" "}
+                {pledgeData.quantity} {pledgeData.quantity ? <span>left</span> : ""}{" "}
               </Typography>
             </div>
             <div>
-              {item.quantity > 0 && item.quantity !== " " && showEnterPledge ? (
+              {pledgeData.quantity > 0 && pledgeData.quantity !== " " && showEnterPledge ? (
                 <div className="enter-pledge">
                   <Typography variant="body2" component="p">
                     Enter your pledge
                   </Typography>
                   <form onSubmit={submitHandler}>
                     <input
+                      name="pledgeInput"
                       type="text"
-                      placeholder="$"
-                      value={pledgeAmount}
-                      onChange={changeHandler}
+                      value={`$${pledgeData.pledge_value}`}
+                      onChange={(e) => setPledgeAmout(changeHandler(e, i))}
                     />
-                    <button>Continue</button>
+                    <button className="continue">Continue</button>
                   </form>
                 </div>
               ) : (

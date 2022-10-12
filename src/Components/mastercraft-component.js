@@ -6,7 +6,7 @@ import ModalComplete from "./modal-complete";
 const style = {
     borderRadius: '10px',
     position: 'absolute',
-    top: '75%',
+    top: '60%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: '85%',
@@ -44,7 +44,7 @@ export default function MastercraftComponent({ showMenu, submitted, setSubmitted
           </button>
           <button className="bookmark-btn-desktop" title="bookmark">
             <img src="/images/icon-bookmark.svg" alt="" />
-            <span>Bookmark</span>
+            <span>Bookmarked</span>
           </button>
         </div>
       </div> 

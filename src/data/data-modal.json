@@ -5,6 +5,7 @@
         "pledge":"",
         "text":"Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.",
         "quantity": "",
+        "pledge_value":"",
         "className":"modal-div"
     },
     {
@@ -13,6 +14,7 @@
         "pledge":"Pledge $25 or more",
         "text":"You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you'll be added to a special Backer member list.",
         "quantity": "101",
+        "pledge_value":"25",
         "className":"modal-div"
     },
     {
@@ -21,6 +23,7 @@
         "pledge":"Pledge $75 or more",
         "text":"You get a Black Special Edition computer stand and a personal thank you. You'll be added to our Backer member list. Shipping is included.",
         "quantity": "64",
+        "pledge_value":"75",
         "className":"modal-div"
     },
     {
@@ -29,6 +32,7 @@
         "pledge":"Pledge $200 or more",
         "text":"You get two Special Edition Mahogamy stands, a Backer T-Shirt, and a personal thank you. You'll be added to our Backer member list. Shipping is included.",
         "quantity": "0",
+        "pledge_value":"",
         "className":"out-modal-div"
     }
 ]
