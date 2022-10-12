@@ -1,11 +1,33 @@
+import { useState, useEffect } from 'react';
+import HeroComponent from './Components/hero-component';
+import MainComponent from './Components/main-component';
 
 import './App.css';
 
+
+
 function App() {
+  const [showMenu, setShowMenu] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const clickHandler = () => {
+    setShowMenu(!showMenu);
+  }
+
+  useEffect(() => {
+    if(showMenu){
+      document.body.style.background = 'rgb(181, 181, 181)';
+    } else {
+      document.body.style.background = '#fff';
+    }
+  }, [showMenu])
+  
   return (
     <div className="App">
-      <h1>Oscar Anillo</h1>
-      <p>Web UI Developer</p>
+        <HeroComponent showMenu={showMenu} clickHandler={clickHandler}/>
+      <div className="container">
+        <MainComponent showMenu={showMenu} submitted={submitted} setSubmitted={setSubmitted} />
+      </div>
     </div>
   );
 }

@@ -1,8 +1,824 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .App {
   text-align: center;
+  min-height: 100vh;
+  font-family: 'Commissioner', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+.container {
+  width: 90%;
+  max-width: 340px;
+  margin: auto;
+}
+
+/* NavComponent */
+.nav {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: .9em;
+}
+.nav-desktop {
+  display: none;
+}
+
+.menu {
+  background: #fff;
+  border-radius: 5px;
+  width: 82%;
+  margin: 2.3em auto;
+  text-align: left;
+  padding: 1em;
+  position: relative;
+  z-index: 2;
+  box-shadow: 1px 1px 10px #999;
+}
+.menu li {
+  padding: 1.4em 0;
+  font-weight: 700;
+}
+.menu li:nth-child(2) {
+  border: none;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+/* HeroComponent */
+.hero-bg {
+  background-image: url('/public/images/image-hero-mobile.jpg');
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+
+/* MainComponent */
+.main {
+  position: relative;
+  top: -50px;
+}
+.main-div {
+  background: #fff;
+  padding: 2.8em 1.6em;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px #999;
+}
+
+.show-main-div {
+  background: transparent;
+  padding: 2.8em 1.6em;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px #999;
+  
+}
+
+
+.main-innner-div .img-master {
+  position: absolute;
+  top: -25px;
+  left: 40%
+}
+.main-innner-div h1 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding-bottom: 1em;
+}
+.main-innner-div p {
+  font-weight: 400;
+  font-size: .9rem;
+  color: hsl(0, 0%, 48%);
+  line-height: 25px;
+  padding-bottom: 2.1em;
+}
+.main-inner-row {
+  display: flex;
+  justify-content: space-between;
+}
+.main-inner-row .cyan-btn {
+  background-color: rgb(60 ,180, 171);
+  border: none;
+  border-radius: 30px;
+  padding: 1em 4em;
+  color: #fff;
+  font-weight: 700;
+}
+.main-inner-row .bookmark-btn {
+  border: none;
+  background: transparent;
+}
+.bookmark-btn-desktop {
+  display: none;
+}
+
+/* Numbers component */
+.numbers {
+  margin-top: 2em;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px #999;
+  padding: 1em 0;
+}
+.numbers div:nth-child(2) {
+  border: none;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: .9em 0;
+  width: 30%;
+  margin: auto;
+}
+
+.numbers-row {
+  display: block;
+}
+.numbers-row h1 {
+  color: hsl(0, 0%, 0%);
+  font-weight: 700;
+}
+.numbers-row p {
+  font-weight: 400;
+  font-size: 12px;
+  color: rgb(154, 154, 154);
+  padding: 1em 0;
+}
+
+progress {
+  border: none;
+  width: 80%;
+  margin: 1em 0;
+}
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 10px;
+}
+progress[value]::-webkit-progress-value {
+  background-color: rgb(60 ,180, 171);
+  border-radius: 10px;
+}
+
+/* AboutComponent */
+.article {
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px #999;
+  padding: 2.8em 0; 
+  text-align: left;
+  margin-top: 32px;
+}
+.article section {
+  width: 80%;
+  margin: auto;
+}
+.article section h1 {
+  padding-bottom: 1em;
+}
+.article section p {
+  font-size: .8rem;
+  line-height: 25px;
+  color: rgb(154, 154, 154);
+  padding-bottom: 2em;
+}
+
+/* PledgeComponent */
+.pledge {
+  border: 1px solid rgb(215, 215, 215);
+  border-radius: 10px;
+  margin: 1em 0;
+  padding: 2em 1.3em;
+}
+.pledge h3 {
+  font-size: 1rem;
+  padding-bottom: .5em;
+}
+.pledge h4 {
+  color: rgb(60 ,180, 171);
+  font-size: .85rem;
+  padding-bottom: 1em;
+}
+.pledge h1 {
+  font-size: 2rem;
+}
+.pledge h1 span {
+  font-size: 1rem;
+  color: rgb(154, 154, 154);;
+}
+.pledge button {
+  border: none;
+  border-radius: 30px;
+  padding: 1em 2em;
+  background-color: rgb(60 ,180, 171);
+  color: #fff;
+  font-weight: 700;
+}
+
+.out {
+  border: 1px solid rgb(215, 215, 215);
+  border-radius: 10px;
+  margin: 1em 0;
+  padding: 2em 1.3em;
+}
+.out h3 {
+  font-size: 1rem;
+  padding-bottom: .5em;
+  color: rgb(128, 128, 128);
+}
+.out h4 {
+  color: rgb(195, 217, 214);
+  font-size: .85rem;
+  padding-bottom: 1em;
+}
+.out p {
+  color: rgb(234, 234, 234);
+}
+.out h1 {
+  font-size: 2rem;
+  color: rgb(154, 154, 154);
+}
+.out h1 span {
+  font-size: 1rem;
+}
+
+.out button {
+  border: none;
+  border-radius: 30px;
+  padding: 1em 2.3em;
+  background-color: rgb(203, 203, 203);
+  color: #fff;
+  font-weight: 700;
+}
+
+
+/* Modal in Mastercraft */
+.MuiModal-root {
+  border-radius: 10px;
+  font-family: 'Commissioner', sans-serif;
+  margin: auto;
+  overflow: auto;
+  width: 90%;
+}
+.inner-box-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+#modal-modal-title {
+  font-weight: 700;
+}
+#modal-modal-x {
+  color: #999;
+  font-weight: 700;
+}
+#modal-modal-description {
+  font-family: 'Commissioner', sans-serif; 
+  font-weight: 400;
+  font-size: .8rem;
+  color: rgb(154, 154, 154);
+  padding-bottom: 1em;
+}
+
+.modal-div {
+  border: 1px solid rgb(215, 215, 215);
+  border-radius: 5px;
+  font-family: 'Commissioner', sans-serif;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.modal-div > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#input-radio-btn {
+  width: 10%;
+  height: 20px;
+  margin-right: 1em;  
+}
+#modal-div-title {
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 700;
+  padding-top: 1em;
+}
+#modal-div-subtitle {
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 700;
+  color: rgb(60 ,180, 171);
+  padding-bottom: 1em;
+}
+#modal-div-text {
+  font-family: 'Commissioner', sans-serif;
+  font-size: .75rem;
+  color: rgb(154, 154, 154);
+  padding-bottom: 1em;
+  line-height: 20px;
+}
+#modal-div-quantity {
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 700;
+}
+#modal-div-quantity span {
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 400;
+  color: rgb(154, 154, 154);
+  font-size: 1rem;
+}
+#modal-div-quantity-desktop {
+  display: none;
+}
+
+.out-modal-div {
+  border: 1px solid rgb(237, 237, 237);
+}
+.out-modal-div #modal-div-title {
+  color: rgb(219, 219, 219);
+}
+.out-modal-div #modal-div-subtitle {
+  color: rgb(188, 216, 216);
+}
+.out-modal-div #modal-div-text {
+  color: rgb(215, 215, 215);
+}
+.out-modal-div #modal-div-quantity {
+  color: rgb(129, 129, 129);
+}
+.out-modal-div #modal-div-quantity span {
+  color: rgb(219, 219, 219);
+}
+
+.enter-pledge {
+  border: none;
+  border-top: 1px solid rgb(215, 215, 215);
+  font-family: 'Commissioner', sans-serif;
+  padding: 1em 0;
+  text-align: center;
+  width: 100%;
+}
+.enter-pledge p {
+  color: rgb(154, 154, 154);
+  padding-bottom: 1em;
+  font-weight: 500;
+}
+.enter-pledge input {
+  border: 1px solid rgb(215, 215, 215);
+  border-radius: 30px;
+  width: 20%;
+  padding: 1em;
+  outline: none;
+  margin-right: 1em;
+}
+.enter-pledge input::after {
+  content: '';
+  border: 1px solid cyan;
+}
+.enter-pledge input::placeholder {
+  color: #999;
+  font-weight: 700;
+}
+.enter-pledge button {
+  border: none;
+  border-radius: 30px;
+  background-color: rgb(60 ,180, 171);
+  color: #fff;
+  padding: 1em 1.5em;
+}
+
+/* ModalComplete */
+.complete-modal-div {
+  font-family: 'Commissioner', sans-serif;
+}
+.complete-div img {
+  margin-bottom: 2em;
+}
+#complete-modal-title {
+  padding-bottom: .5em;
+  font-size: 1.3rem;
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 700;
+}
+#complete-modal-description {
+  color: rgb(154, 154, 154);
+  font-family: 'Commissioner', sans-serif;
+  font-size: .9rem;
+  font-weight: 400;
+  padding-bottom: 1.5em;
+}
+.complete-div button {
+  background-color: rgb(60 ,180, 171);
+  border-radius: 30px;
+  padding: 1em 2.2em;
+}
+.complete-div button a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: initial;
+  font-family: 'Commissioner', sans-serif;
+}
+
+@media(min-width: 1000px) {
+  .container {
+    width: 90%;
+    max-width: 740px;
+    margin: auto;
+  }
+  
+  /* NavComponent */
+  .nav {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 4em;
+  }
+  .nav-desktop {
+    display: block;
+  }
+  .nav-desktop ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-desktop ul li {
+    color: #fff;
+    margin-left: 2em;
+    text-shadow: 1px 1px 1px #000;
+  }
+  .nav-desktop ul li:hover {
+    cursor: pointer;
+  }
+  .nav-mobile {
+    display: none;
+  }
+  
+  /* HeroComponent */
+  .hero-bg {
+    background-image: url('/public/images/image-hero-desktop.jpg');
+    background-position: center top;
+    height: 520px;
+  }
+  
+  /* MainComponent */
+  .main {
+    top: -105px;
+  }
+  .main-innner-div .img-master {
+    top: -30px;
+    left: 46%
+  }
+  .main-innner-div h1 {
+    font-size: 1.8rem;
+    padding: .5em 0;
+  }
+  .main-innner-div p {
+    font-size: 1rem;
+    padding-bottom: 2em;
+  }
+  .main-inner-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 91%;
+    margin: auto;
+  }
+  .main-inner-row .cyan-btn {
+    background-color: rgb(60 ,180, 171);
+    border: none;
+    border-radius: 30px;
+    padding: 1.6em 3.5em;
+    color: #fff;
+    font-weight: 700;
+    transition: all .5s;
+  }
+  .main-inner-row .cyan-btn:hover {
+    background-color: rgb(21, 122, 116);
+    cursor: pointer;
+  }
+  .main-inner-row .bookmark-btn {
+    display: none;
+  }
+  .bookmark-btn-desktop {
+    display: block;
+    border: none;
+    border-radius: 30px;
+    padding-right: 4em;
+  }
+  .bookmark-btn-desktop:hover {
+    cursor: pointer;
+  }
+  .bookmark-btn-desktop img:hover {
+    filter: hue-rotate(180deg) sepia(100%) contrast(300%);
+  }
+  .bookmark-btn-desktop span {
+    color: rgb(125, 125, 125);
+    font-weight: 700;
+    position: relative;
+    top: -20px;
+    left: 15px
+  }
+  .bookmark-btn-desktop span:hover {
+    color: rgb(38, 124, 113);
+  }
+  /* Numbers component */
+  .numbers {
+    margin-top: 2em;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #999;
+    padding: 2.7em 0;
+  }
+  .numbers div:nth-child(2) {
+    border-top: none;
+    border-bottom: none;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    padding: 0;
+    width: 50%;
+    margin: auto;
+  }
+  
+  .numbers-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+  }
+  .numbers-row h1 {
+    color: hsl(0, 0%, 0%);
+    font-weight: 700;
+  }
+  .numbers-row p {
+    font-size: 1rem;
+  }
+  
+  progress {
+    width: 85%;
+    margin: 1em auto;
+  }
+  
+  /* AboutComponent */
+  .article {
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #999;
+    padding: 2.8em 0; 
+    text-align: left;
+    margin-top: 32px;
+  }
+  .article section {
+    width: 80%;
+    margin: auto;
+  }
+  .article section h1 {
+    padding-bottom: 1em;
+  }
+  .article section p {
+    font-size: .8rem;
+    line-height: 25px;
+    color: rgb(154, 154, 154);
+    padding-bottom: 2em;
+  }
+  
+  /* PledgeComponent */
+  .pledge {
+    border: 1px solid rgb(215, 215, 215);
+    border-radius: 10px;
+    margin: 1em 0;
+    padding: 2em 1.3em;
+  }
+  .pledge-row-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .pledge h3 {
+    font-size: 1rem;
+    padding-bottom: 1em;
+  }
+  .pledge h4 {
+    color: rgb(60 ,180, 171);
+    font-size: .85rem;
+    padding-bottom: 1.2em;
+  }
+  .pledge h1 {
+    font-size: 2rem;
+  }
+  .pledge h1 span {
+    font-size: 1rem;
+    color: rgb(154, 154, 154);;
+  }
+  .pledge button {
+    border: none;
+    border-radius: 30px;
+    padding: 1em 2em;
+    background-color: rgb(60 ,180, 171);
+    color: #fff;
+    font-weight: 700;
+    transition: all .5s;
+  }
+  .pledge button:hover {
+    background-color: rgb(21, 122, 116);
+    cursor: pointer;
+  }
+  
+  .out {
+    border: 1px solid rgb(215, 215, 215);
+    border-radius: 10px;
+    margin: 1em 0;
+    padding: 2em 1.3em;
+  }
+  .out h3 {
+    font-size: 1rem;
+    padding-bottom: 1em;
+  }
+  .out h4 {
+    color: rgb(195, 217, 214);
+    font-size: .85rem;
+    padding-bottom: 1.2em;
+  }
+  
+  .out h1 span {
+    font-size: 1rem;
+  }
+  
+  
+  /* Modal in Mastercraft */
+  .MuiModal-root {
+    overflow: auto;
+    max-width: 730px;
+  }
+  .inner-box-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .data-modal-row-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  #modal-modal-x:hover {
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #000;
+  }
+  #modal-modal-description {
+    font-size: 1rem;
+    padding-bottom: 1em;
+  }
+  
+  .modal-div {
+    border: 1px solid rgb(215, 215, 215);
+    border-radius: 5px;
+    font-family: 'Commissioner', sans-serif;
+    padding: 1em;
+    margin: 1em 0;
+  }
+  .modal-div:hover {
+    border: 1px solid rgb(60 ,180, 171);
+  }
+  .modal-div > div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+ 
+  #input-radio-btn {
+    width: 10%;
+    height: 25px;
+    margin-right: .2em;  
+  }
+  #modal-div-title {
+    padding-top: 0;
+    padding-right: 1em;
+  }
+  #modal-div-title:hover {
+    color: rgb(60 ,180, 171);
+    cursor: pointer;
+  }
+  #modal-div-subtitle {
+    padding-bottom: 0;
+    padding-right: 10em;
+  }
+  #modal-div-text {
+    font-family: 'Commissioner', sans-serif;
+    font-size: .75rem;
+    color: rgb(154, 154, 154);
+    padding: 1em 0 1em 2.5em;
+    width: 85%;
+    margin: auto;
+    line-height: 20px;
+  }
+  #modal-div-quantity-desktop {
+    display: block;
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 700;
+  }
+  #modal-div-quantity-desktop span {
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 400;
+    color: rgb(154, 154, 154);
+    font-size: 1rem;
+  }
+  #modal-div-quantity {
+    display: none;
+  }
+  
+  .out-modal-div {
+    border: 1px solid rgb(237, 237, 237);
+  }
+  .out-modal-div #modal-div-title {
+    color: rgb(219, 219, 219);
+  }
+  .out-modal-div #modal-div-subtitle {
+    color: rgb(188, 216, 216);
+  }
+  .out-modal-div #modal-div-text {
+    color: rgb(215, 215, 215);
+  }
+  .out-modal-div #modal-div-quantity {
+    color: rgb(129, 129, 129);
+  }
+  .out-modal-div #modal-div-quantity span {
+    color: rgb(219, 219, 219);
+  }
+  
+  .enter-pledge {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: right;
+  }
+  .enter-pledge p {
+    padding-bottom: 0;
+  }
+  .enter-pledge input {
+    border: 1px solid rgb(215, 215, 215);
+    border-radius: 30px;
+    width: 20%;
+    padding: 1em;
+    outline: none;
+    margin-right: 1em;
+  }
+  .enter-pledge input:hover {
+    cursor: pointer;
+    border: 1px solid rgb(60 ,180, 171);
+  }
+  .enter-pledge input::placeholder {
+    color: #999;
+    font-weight: 700;
+  }
+  .enter-pledge button {
+    border: none;
+    border-radius: 30px;
+    background-color: rgb(60 ,180, 171);
+    color: #fff;
+    padding: 1em 1.5em;
+    transition: all .2s;
+  }
+  .enter-pledge button:hover {
+    background: rgb(24 120 116);
+    cursor: pointer;
+  }
+  
+  /* ModalComplete */
+  .complete-modal-div {
+    font-family: 'Commissioner', sans-serif;
+  }
+  .complete-div img {
+    margin-bottom: 2em;
+  }
+  #complete-modal-title {
+    padding-bottom: .5em;
+    font-size: 1.3rem;
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 700;
+  }
+  #complete-modal-description {
+    color: rgb(154, 154, 154);
+    font-family: 'Commissioner', sans-serif;
+    font-size: .9rem;
+    font-weight: 400;
+    padding-bottom: 1.5em;
+  }
+  .complete-div button {
+    background-color: rgb(60 ,180, 171);
+    border-radius: 30px;
+    padding: 1em 2.2em;
+  }
+  .complete-div button:hover {
+    background-color: rgb(21, 122, 116);
+  }
+  .complete-div button a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: initial;
+    font-family: 'Commissioner', sans-serif;
+  }
 }
